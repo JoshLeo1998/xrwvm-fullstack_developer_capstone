@@ -1,0 +1,53 @@
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+</head>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+    <div class="container-fluid">
+        <h2 style="padding-right: 5%;">Dealerships</h2>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: larger;" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="contact-section" style="margin: auto; width: 80%; padding: 20px;">
+    <h1 style="text-align: center;">Contact Us</h1>
+    <p style="text-align: center;">We’d love to hear from you! Here’s how you can reach us:</p>
+
+    <div class="contact-info" style="display: flex; justify-content: space-around; margin-top: 20px;">
+        <div>
+            <h3>Address</h3>
+            <p>1234 Best Cars Street</p>
+            <p>Car City, NA 56789</p>
+        </div>
+        <div>
+            <h3>Phone</h3>
+            <p>+1 123-456-7890</p>
+        </div>
+        <div>
+            <h3>Email</h3>
+            <p>contact@bestcars.com</p>
+        </div>
+    </div>
+
+    <form class="contact-form" style="margin-top: 30px; text-align: center;">
+        <h3>Send Us a Message</h3>
+        <input type="text" name="name" placeholder="Your Name" style="margin: 10px; padding: 10px; width: 80%;">
+        <input type="email" name="email" placeholder="Your Email" style="margin: 10px; padding: 10px; width: 80%;">
+        <textarea name="message" placeholder="Your Message" style="margin: 10px; padding: 10px; width: 80%; height: 100px;"></textarea>
+        <button type="submit" style="margin: 10px; padding: 10px; width: 50%; background-color: darkturquoise; color: white; border: none;">Send</button>
+    </form>
+</div>
