@@ -15,7 +15,7 @@ urlpatterns = [
     path(route='logout', view=views.logout_user, name='logout'),
 
     # Route for fetching dealerships
-    path(route="get_dealers", view=views.get_dealerships, name="get_dealers"),
+    path(route="get_dealers/", view=views.get_dealerships, name="get_dealers"),
     path(route="get_dealers/<str:state>", view=views.get_dealerships, name="get_dealers_by_state"),
 
     # Route for fetching a specific dealer's details
