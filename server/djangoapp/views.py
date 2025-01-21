@@ -6,11 +6,26 @@ from django.views.decorators.csrf import csrf_exempt
 import logging
 import json
 from datetime import datetime
+from django.http import JsonResponse
+from .models import CarMake, CarModel
+from .populate import initiate  # Import the populate function
+
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 
 # Create your views here.
+def get_cars(request):
+    count = CarMake.objects.filter().count()
+    print(count)
+    if count == 0:  # Populate data if CarMake table is empty
+        initiate()
+    car_models = CarModel.objects.select_related('car_make')
+    cars = [
+        {"CarModel": car_model.name, "CarMake": car_model.car_make.name}
+        for car_model in car_models
+    ]
+    return JsonResponse({"CarModels": cars})
 
 # Create a `login_user` view to handle sign-in request
 @csrf_exempt
